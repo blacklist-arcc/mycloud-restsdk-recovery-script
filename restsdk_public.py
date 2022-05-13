@@ -25,7 +25,7 @@ def hasAnotherParent(fileID):
         return False
 def findTree(fileID,name,parent):
     #turn a file ID into an original path
-    path=fileDIC[parent]['Name']+"/"+name
+    path=name
     while hasAnotherParent(fileID)==True:
         fileID=findNextParent(fileID)
         path=fileDIC[fileID]['Name']+'/'+path
